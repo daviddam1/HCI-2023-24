@@ -1,6 +1,10 @@
+"use client"
 import React from 'react'
 
 import heroItems from '@/app/enum/hero'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
 const Hero = () => {
     return (
@@ -19,21 +23,31 @@ const Hero = () => {
                     {heroItems.map(item => (
                         <div key={item.id} className='px-4 w-full'>
                             <div className='flex py-2'>
-                                <img className="rounded-xl " alt={item.name} width={420} height={328} src={item.img}></img>
+                                <img className="rounded-xl" alt={item.name} width={420} height={328} src={item.img}></img>
                             </div>
                             <div>
                                 <p className='font-bold mt-3 text-[18px]'>{item.name}</p>
                                 <div className='py-2  w-full'>
                                     <div className='flex'>
-                                        <img width={55} height={21} src={item.loc_img}></img>
+                                        <img width={55} height={20} src={item.loc_img}></img>
                                         <p className='font-regular'>{item.location}</p>
                                     </div>
                                     <p className='pt-8 font-medium'>{item.body}</p>
                                 </div>
-
                             </div>
                         </div>
                     ))}
+                </div>
+                <div className='flex justify-center align-middle'>
+                    <div className='bg-[#F2E863] mt-12 mx-2 p-2 rounded-xl w-12 h-12 flex justify-center items-center cursor-pointer '>
+                        <FontAwesomeIcon className='' icon={faChevronLeft} color='white' size='2x' />
+                    </div>
+                    <div className='bg-[#F2E863] mt-12 mx-2 p-2 rounded-xl w-12 h-12 flex justify-center items-center cursor-pointer'>
+                        <FontAwesomeIcon className='' icon={faChevronRight} color='white' size='2x' />
+                    </div>
+                </div>
+                <div className='flex flex-row-reverse'>
+                    <div className='flex flex-end bg-[#F2E863] h-4 w-96 mt-20'></div>
                 </div>
             </div>
         </section>
