@@ -4,7 +4,6 @@ import React from 'react'
 const StoriesExperiences = () => {
   return (
     <section>
-      <Header />
       Hello Travel Stories&Experiences
     </section>
   )

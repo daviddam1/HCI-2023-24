@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react';
 import Link from 'next/link';
 import sitemap from '@/app/enum/sitemap';
@@ -8,7 +10,7 @@ export const Header = () => {
             <div className='w-full flex flex-row justify-between pt-7'>
                 {
                     <Link href={"/"}>
-                        <div className='flex items-center pl-16'>
+                        <div className='flex items-center px-20'>
                             <img src="../assets/icons/traveler.png" width={78} height={68} alt="logo" />
                             <span className='font-semibold text-[22px] text-[#F2E863] pt-3'>Traveler</span>
                         </div>
@@ -17,21 +19,21 @@ export const Header = () => {
                 <div className='flex items-center justify-end'>
                     {
                         sitemap.map((item) => (
-                            <div className="pr-3 mr-20" key={item.id} >
+                            <div className="pt-3 pr-3 mr-20" key={item.id} >
                                 <Link className="font-regular" href={item.link}>{item.name}</Link>
                                
                             </div>
                         ))
                     }
-                    <button className='p-2 mr-20 rounded-lg border-2'>Login</button>                 
+                    <button className='p-2 mr-20 rounded-lg border-2 mt-3'>Login</button>                 
                 </div>
             </div>
-            <div className='pl-16 pt-16'>
+            <div className='p-20'>
                 <div className='text-[48px] font-bold'>
                     <p>Exploring the World,</p>
                     <p> One Journey at a Time</p>
                 </div>
-                <div className='pt-12 text-[16px] font-regular'>
+                <div className='pt-12 text-[18px] font-medium'>
                     <p>Discovering Diverse Cultures, Experiencing Unforgettable Adventures,<br />
                         and Sharing the Beauty of Our Planet, One Jouerney at a Time
                     </p>
