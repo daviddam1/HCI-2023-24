@@ -1,9 +1,12 @@
 import React from 'react'
-
-const Page = () => {
+import { Header } from '@/app/components/header'
+const Community = () => {
   return (
-    <div>Page</div>
+      <div>
+          <Header />
+          Hello Community
+      </div>
   )
 }
 
-export default Page
+export default Community
