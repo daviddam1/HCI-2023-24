@@ -12,7 +12,7 @@ const Hero = () => {
             <div className='p-20'>
                 <div className='flex flex-row justify-between pb-20'>
                     <div>
-                        <div className='bg-[#F2E863] h-4 w-96 mb-4'></div>
+                        <div className='bg-[#F2E863] h-4 w-96 mb-4 rounded-xl'></div>
                         <p className='text-[48px] font-semibold max-sm:text-[22px]'>Our Top Popular<br /><span className='text-[#F2E863]'>Destinations</span></p>
                     </div>
                     <div className='flex flex-col-reverse'>
@@ -30,7 +30,7 @@ const Hero = () => {
                                 <div className='py-2  w-full'>
                                     <div className='flex'>
                                         <img width={55} height={20} src={item.loc_img}></img>
-                                        <p className='font-regular'>{item.location}</p>
+                                        <p className='font-regular text-[14px]'>{item.location}</p>
                                     </div>
                                     <p className='pt-8 font-medium'>{item.body}</p>
                                 </div>
@@ -39,15 +39,15 @@ const Hero = () => {
                     ))}
                 </div>
                 <div className='flex justify-center align-middle'>
-                    <div className='bg-[#F2E863] mt-12 mx-2 p-2 rounded-xl w-12 h-12 flex justify-center items-center cursor-pointer '>
-                        <FontAwesomeIcon className='' icon={faChevronLeft} color='white' size='2x' />
+                    <div className='bg-[#F2E863] mt-12 mx-2 p-2 rounded-xl w-10 h-10 flex justify-center items-center cursor-pointer '>
+                        <FontAwesomeIcon className='' icon={faChevronLeft} color='#081C31' size='2x' />
                     </div>
-                    <div className='bg-[#F2E863] mt-12 mx-2 p-2 rounded-xl w-12 h-12 flex justify-center items-center cursor-pointer'>
-                        <FontAwesomeIcon className='' icon={faChevronRight} color='white' size='2x' />
+                    <div className='bg-[#F2E863] mt-12 mx-2 p-2 rounded-xl w-10 h-10 flex justify-center items-center cursor-pointer'>
+                        <FontAwesomeIcon className='' icon={faChevronRight} color='#081C31' size='2x' />
                     </div>
                 </div>
                 <div className='flex flex-row-reverse'>
-                    <div className='flex flex-end bg-[#F2E863] h-4 w-96 mt-20'></div>
+                    <div className='flex flex-end bg-[#F2E863] h-4 w-96 mt-20 rounded-xl'></div>
                 </div>
             </div>
         </section>

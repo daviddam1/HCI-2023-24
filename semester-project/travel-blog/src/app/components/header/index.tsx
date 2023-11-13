@@ -39,7 +39,7 @@ export const Header = () => {
                     </p>
                 </div>
                 <div className='pt-20'>
-                    <button className='my-10 pl-8 pr-8 py-4 bg-[#F2E863] rounded-lg text-[#081C31] font-medium'>Getting Started</button>
+                    <button className='my-10 pl-8 pr-8 py-4 bg-[#F2E863] rounded-lg text-[#081C31] font-semibold'>Getting Started</button>
                 </div>
             </div>
         </section>

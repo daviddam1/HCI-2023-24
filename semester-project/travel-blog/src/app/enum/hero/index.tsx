@@ -13,7 +13,7 @@ const heroItems = [
         name:'Plitvice Lakes',
         loc_img:'../assets/icons/location.png',
         location:'Slunj, Croatia',
-        body:'Immerse yourself in the enchanting natural beauty of Plitvička Jezera, a paradise of cascading waterfalls and pristine lakes that beckons adventurers to explore Croatia`s hidden gem.'
+        body:'Immerse yourself in the enchanting natural beauty of Plitvice lakes, a paradise of cascading waterfalls and pristine lakes that beckons adventurers to explore Croatia`s hidden gem.'
     },
     {   
         id:3,

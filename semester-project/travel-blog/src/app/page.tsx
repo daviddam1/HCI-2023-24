@@ -3,6 +3,7 @@ import React from 'react'
 import { Header } from './components/header'
 import Hero from './components/hero'
 import Feed from './components/feed'
+import Footer from './components/footer'
 
 
 const page = () => {
@@ -11,6 +12,7 @@ const page = () => {
       <Header />
       <Hero />
       <Feed />
+      <Footer />
     </section>
   )
 }
