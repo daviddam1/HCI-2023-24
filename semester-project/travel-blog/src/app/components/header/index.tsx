@@ -1,6 +1,7 @@
 "use client"
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import sitemap from '@/app/enum/sitemap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faClose } from '@fortawesome/free-solid-svg-icons';
@@ -12,7 +13,7 @@ export const Header = () => {
             <div className='w-full flex flex-row justify-between pt-7 px-4 md:px-20'>
                 <Link href={"/"}>
                     <div className='flex items-center'>
-                        <img src="../assets/icons/traveler.png" width={78} height={68} alt="logo" />
+                        <Image src="/assets/icons/traveler.png" width={78} height={68} alt="logo" />
                         <span className='font-semibold text-[22px] text-[#F2E863] pt-3'>Traveler</span>
                     </div>
                 </Link>

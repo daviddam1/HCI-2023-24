@@ -1,6 +1,7 @@
 "use-client"
 import React from 'react'
 import userExperience from '@/app/enum/userExperience'
+import Image from 'next/image'
 
 export const Feed = () => {
 
@@ -23,7 +24,7 @@ export const Feed = () => {
         {userExperience.map(item => (
           <div className={item.id === 2 ? "flex flex-row-reverse md:text-[#2A3C4B] pb-4 md:pb-8" : "flex flex-reverse md:text-[#2A3C4B] pb-4 md:pb-8"} key={item.id}>
             <div>
-              <img className={item.id === 2 ? "rounded-xl" : "rounded-xl md:mr-8"} width={300} height={120} src={item.img} alt={item.name} />
+              <Image className={item.id === 2 ? "rounded-xl" : "rounded-xl md:mr-8"} width={300} height={120} src={item.img} alt={item.name} />
             </div>
             <div className={item.id === 2 ? 'w-full md:w-1/4 md:mr-8 text-right' : 'w-full md:w-1/4'}>
               <p className='font-semibold text-[20px] md:text-[20px] mx-3 pb-2 md:pb-5'>{item.name}</p>

@@ -2,6 +2,7 @@ import React from 'react'
 import heroItems from '@/app/enum/hero'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
+import Image from 'next/image'
 
 const Hero = () => {
   return (
@@ -24,13 +25,13 @@ const Hero = () => {
           {heroItems.map(item => (
             <div key={item.id} className='px-2 w-full md:w-1/2 lg:w-1/3'>
               <div className='flex py-2'>
-                <img className="rounded-xl w-full" alt={item.name} height={328} src={item.img}></img>
+                <Image className="rounded-xl w-full" alt={item.name} height={328} width={328} src={item.img}/>
               </div>
               <div>
                 <p className='font-bold mt-3 text-[18px]'>{item.name}</p>
                 <div className='py-2'>
                   <div className='flex items-center'>
-                    <img width={55} height={20} src={item.loc_img} alt={item.location}></img>
+                    <Image width={55} height={20} src={item.loc_img} alt={item.location}/>
                     <p className='font-regular text-[14px]'>{item.location}</p>
                   </div>
                   <p className='pt-4 md:pt-8 font-medium'>{item.body}</p>

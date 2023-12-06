@@ -1,13 +1,14 @@
-import React from 'react'
-import Link from 'next/link'
-import sitemap from '@/app/enum/sitemap'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import React from 'react';
+import Link from 'next/link';
+import sitemap from '@/app/enum/sitemap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faFacebookSquare,
   faInstagramSquare,
   faTwitterSquare,
   faDiscord
-} from '@fortawesome/free-brands-svg-icons'
+} from '@fortawesome/free-brands-svg-icons';
+import Image from 'next/image';
 
 const Footer = () => {
   return (
@@ -16,23 +17,21 @@ const Footer = () => {
         <div className='w-full md:w-1/3'>
           <Link href={"/"}>
             <div className='flex items-center'>
-              <img src="../assets/icons/traveler.png" width={78} height={68} alt="logo" />
+              <Image src="/assets/icons/traveler.png" width={78} height={68} alt="logo" />
               <span className='font-semibold text-[18px] md:text-[24px] text-[#F2E863] pt-3'>Traveler</span>
             </div>
           </Link>
           <p className='pt-6 md:pt-10 text-sm md:text-base italic'>
-            "At Traveler, we're your trusted companions in navigating the globe's hidden treasures. With our extensive travel guides and personal insights, we're dedicated to helping you uncover and explore the world's most captivating destinations, from remote corners to vibrant metropolises, revealing the beauty and diversity of our planet."
+            &quot;At Traveler, we&apos;re your trusted companions in navigating the globe&apos;s hidden treasures. With our extensive travel guides and personal insights, we&apos;re dedicated to helping you uncover and explore the world&apos;s most captivating destinations, from remote corners to vibrant metropolises, revealing the beauty and diversity of our planet.&quot;
           </p>
         </div>
         <div className='w-full md:w-1/3 flex flex-col items-center text-[14px] pt-6 md:pt-3'>
           <h2 className='pt-8 pb-4 md:pb-10 text-[#F2E863] font-semibold text-[16px] md:text-[18px]'>Spaces</h2>
-          {
-            sitemap.map((item) => (
-              <div className="pt-3" key={item.id} >
-                <Link className="font-medium" href={item.link}>{item.name}</Link>
-              </div>
-            ))
-          }
+          {sitemap.map((item) => (
+            <div className="pt-3" key={item.id}>
+              <Link className="font-medium" href={item.link}>{item.name}</Link>
+            </div>
+          ))}
         </div>
         <div className='w-full md:w-1/3 flex flex-col items-center text-[14px] pt-6 md:pt-3'>
           <h2 className='pt-8 pb-4 md:pb-10 text-[#F2E863] font-semibold text-[16px] md:text-[18px]'>My Account</h2>
@@ -50,7 +49,7 @@ const Footer = () => {
         Copyright @ 2023 FESB. All rights reserved.
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
