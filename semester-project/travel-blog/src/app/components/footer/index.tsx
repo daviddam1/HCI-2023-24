@@ -13,7 +13,7 @@ import Image from 'next/image';
 const Footer = () => {
   return (
     <section className='bg-[#2A3C4B]'>
-      <div className='flex flex-col md:flex-row p-4 md:p-20'>
+      <div className='flex flex-col md:flex-row p-4 md:p-20 text-white'>
         <div className='w-full md:w-1/3'>
           <Link href={"/"}>
             <div className='flex items-center'>
@@ -45,7 +45,7 @@ const Footer = () => {
         <FontAwesomeIcon className='px-6 md:px-10' icon={faTwitterSquare} size='2x' color='#F2E863' />
         <FontAwesomeIcon className='px-6 md:px-10' icon={faDiscord} size='2x' color='#F2E863' />
       </div>
-      <div className='flex justify-center font-thin text-[10px] md:text-[12px] italic'>
+      <div className='flex justify-center font-thin text-[10px] md:text-[12px] italic text-gray-300'>
         Copyright @ 2023 FESB. All rights reserved.
       </div>
     </section>
