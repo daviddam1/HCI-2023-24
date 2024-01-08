@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { Header } from '@/app/components/header';
 import Footer from '@/app/components/footer';
 
-export default function DestinationPost({ params }) {
+export default function DestinationPost({ params }: { params: { postId: string } }) {
   const { postId } = params;
 
   const destination = destinations.find((dest) => String(dest.id) === postId);

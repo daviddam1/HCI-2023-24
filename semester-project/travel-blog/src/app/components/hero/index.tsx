@@ -5,11 +5,13 @@ import Image from 'next/image'
 import { Header } from '../header'
 
 const Hero = () => {
-  const destinationRef = useRef(null);
+  const destinationRef = useRef<HTMLDivElement | null>(null);
 
   const scrollToDestinations = () => {
-    destinationRef.current.scrollIntoView({ behavior: 'smooth' });
-  };
+    if (destinationRef.current)
+      destinationRef.current.scrollIntoView({ behavior: 'smooth' });
+  }
+
   return (
     <>
       <div className='pb-11 bg-slate-600' style={{ backgroundImage: 'url(../assets/images/header-wallpaper.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
