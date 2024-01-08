@@ -1,31 +1,35 @@
-import React from 'react'
+"use client"
+import React, { useRef } from 'react'
 import heroItems from '@/app/enum/hero'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import Image from 'next/image'
 import { Header } from '../header'
 
 const Hero = () => {
+  const destinationRef = useRef(null);
+
+  const scrollToDestinations = () => {
+    destinationRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
   return (
     <>
-      <div className='pb-11 bg-slate-600' style={{ backgroundImage: 'url(../assets/images/header-wallpaper.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>   
-          <Header />
-          <div className='p-4 md:p-20 text-white'>
-            <div className='text-[32px] md:text-[48px] font-bold'>
-                <p>Exploring the World,</p>
-                <p> One Journey at a Time</p>
-            </div>
-            <div className='pt-4 md:pt-12 text-[14px] md:text-[18px] font-medium'>
-                <p>Discovering Diverse Cultures, Experiencing Unforgettable Adventures,<br />
-                  and Sharing the Beauty of Our Planet, One Journey at a Time
-                </p>
-            </div>
-            <div className='pt-8 md:pt-20'>
-              <button className='my-4 md:my-10 pl-4 md:pl-8 pr-4 md:pr-8 py-2 md:py-4 bg-[#F2E863] rounded-lg text-[#081C31] font-semibold'>Getting Started</button>
-            </div>
+      <div className='pb-11 bg-slate-600' style={{ backgroundImage: 'url(../assets/images/header-wallpaper.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <Header />
+        <div className='p-4 md:p-20 text-white'>
+          <div className='text-[32px] md:text-[48px] font-bold'>
+            <p>Exploring the World,</p>
+            <p> One Journey at a Time</p>
           </div>
+          <div className='pt-4 md:pt-12 text-[14px] md:text-[18px] font-medium'>
+            <p>Discovering Diverse Cultures, Experiencing Unforgettable Adventures,<br />
+              and Sharing the Beauty of Our Planet, One Journey at a Time
+            </p>
+          </div>
+          <div className='pt-8 md:pt-20'>
+            <button onClick={scrollToDestinations} className='my-4 md:my-10 pl-4 md:pl-8 pr-4 md:pr-8 py-2 md:py-4 bg-[#F2E863] rounded-lg text-[#081C31] font-semibold'>Getting Started</button>
+          </div>
+        </div>
       </div>
-      <div className='bg-[#2A3C4B]'>
+      <div ref={destinationRef} className='bg-[#2A3C4B]'>
         <div className='p-4 md:p-20 text-white'>
           <div className='flex flex-col md:flex-row justify-between pb-4 md:pb-20'>
             <div className='md:w-1/2'>
@@ -44,13 +48,13 @@ const Hero = () => {
             {heroItems.map(item => (
               <div key={item.id} className='px-2 w-full md:w-1/2 lg:w-1/3'>
                 <div className='flex py-2'>
-                  <Image className="rounded-xl w-full" alt={item.name} height={328} width={328} src={item.img}/>
+                  <Image className="rounded-xl w-full" alt={item.name} height={328} width={328} src={item.img} />
                 </div>
                 <div>
                   <p className='font-bold mt-3 text-[18px]'>{item.name}</p>
                   <div className='py-2'>
                     <div className='flex items-center'>
-                      <Image width={55} height={20} src={item.loc_img} alt={item.location}/>
+                      <Image width={55} height={20} src={item.loc_img} alt={item.location} />
                       <p className='font-regular text-[14px]'>{item.location}</p>
                     </div>
                     <p className='pt-4 md:pt-8 font-medium'>{item.body}</p>
@@ -58,14 +62,6 @@ const Hero = () => {
                 </div>
               </div>
             ))}
-          </div>
-          <div className='flex justify-center items-center max-lg:hidden'>
-            <div className='bg-[#F2E863] mt-6 md:mt-12 mx-2 p-2 rounded-xl w-10 h-10 flex justify-center items-center cursor-pointer'>
-              <FontAwesomeIcon className='' icon={faChevronLeft} color='#081C31' size='2x' />
-            </div>
-            <div className='bg-[#F2E863] mt-6 md:mt-12 mx-2 p-2 rounded-xl w-10 h-10 flex justify-center items-center cursor-pointer'>
-              <FontAwesomeIcon className='' icon={faChevronRight} color='#081C31' size='2x' />
-            </div>
           </div>
           <div className='flex flex-row-reverse'>
             <div className='flex flex-end bg-[#F2E863] h-4 w-full md:w-96 mt-4 md:mt-20 rounded-xl'></div>
