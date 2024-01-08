@@ -5,23 +5,27 @@ import { Header } from "@/app/components/header";
 import Image from "next/image";
 import { useState } from "react";
 
-export default async function Destinations() {
+export default function Destinations() {
   const [search, setSearch] = useState("");
 
+  const filteredDestinations = destinations.filter((destination) =>
+    destination.location.toLowerCase().includes(search.toLowerCase())
+  )
+
   return (
-    <main className="flex flex-col items-center p-4 md:p-10 bg-[#2A3C4B]">
+    <main className="flex flex-col items-center bg-[#2A3C4B]">
       <Header />
-      <div className="flex flex-col p-4 md:p-10">
+      <div className="flex flex-col pt-4 md:p-20">
         <form>
           <input
-            className="w-full md:w-1/2 flex items-center p-1 rounded-xl mx-auto md:mx-10 text-black my-10"
-            placeholder="Search for destination"
+            className="w-full md:w-1/2 flex items-center p-2 rounded-xl mx-auto text-black mb-10 outline-none"
+            placeholder="Search for destination (e.g. Rome)"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           ></input>
         </form>
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-6 md:gap-8">
-          {destinations.map((destination) => (
+          {filteredDestinations.map((destination) => (
             <div key={destination.id} className="rounded-xl overflow-hidden shadow-md bg-[#2A3C4B]">
               <div className="relative h-40 sm:h-52">
                 <Image
@@ -36,7 +40,7 @@ export default async function Destinations() {
                 <p className="text-sm md:text-base">{destination.info}</p>
                 <Link href={`destinations/${destination.id}`}>
                   <button className="mt-3 md:mt-4 px-3 py-1 md:px-4 md:py-2 bg-[#F2E863] rounded-lg text-[#081C31]">
-                    Visit {destination.location}
+                    More info
                   </button>
                 </Link>
               </div>
