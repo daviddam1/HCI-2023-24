@@ -3,6 +3,7 @@ import Link from 'next/link';
 import destinations from '@/app/enum/destinationsData';
 import Image from 'next/image';
 import { Header } from '@/app/components/header';
+import Footer from '@/app/components/footer';
 
 export default function DestinationPost({ params }) {
   const { postId } = params;
@@ -22,15 +23,15 @@ export default function DestinationPost({ params }) {
   }
 
   return (
-    <div className="flex flex-col items-center bg-[#2A3C4B]">
+    <div className="flex flex-col items-center bg-[#2A3C4B] text-white">
       <Header />
-      <h1 className="text-3xl font-bold pt-10 capitalize">
+      <h1 className="text-3xl font-bold pt-10 capitalize text-[#F2E863]">
         Sights in {destination.location}
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-6 md:gap-8 px-4 sm:px-10 lg:px-20 py-4 md:py-10 ">
         {destination.topLocations.map((topLocation, index) => (
           <div className='py-4 rounded-xl overflow-hidden shadow-md bg-[#2A3C4B]' key={index}>
-            <h2 className="text-xl font-bold my-3">{topLocation.name}</h2>
+            <h2 className="text-xl font-bold my-3 text-[#F2E863]">{topLocation.name}</h2>
             <div className="relative w-full h-60 sm:h-80">
               <Image
                 layout="fill"
@@ -40,14 +41,15 @@ export default function DestinationPost({ params }) {
                 className="rounded-xl"
               />
             </div>
-            <p className="mt-2"><strong>Location:</strong> {topLocation.location}</p>
-            <p className='mt-4 font-regular'><strong>Info: </strong>{topLocation.info}</p>
+            <p className="mt-2"><strong className='text-[#F2E863]'>Location:</strong> {topLocation.location}</p>
+            <p className='mt-4 font-regular'><strong className='text-[#F2E863]'>Info: </strong>{topLocation.info}</p>
           </div>
         ))}
       </div>
       <Link href="/pages/destinations">
         <button className="text-[#081C31] cursor-pointer mt-8 bg-[#F2E863] my-6 p-2 rounded-xl">&larr; Back to Destinations</button>
       </Link>
+      <Footer />
     </div>
   );
 }

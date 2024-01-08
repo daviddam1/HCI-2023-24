@@ -8,7 +8,7 @@ const About = () => {
         <Header />
         <div className='p-20'>
             <p className='text-[#F2E863] font-bold text-3xl'>About Us</p>
-            <div className='flex flex-end bg-[#F2E863] h-2 rounded-xl'></div>
+            <div className='flex flex-end bg-[#F2E863] h-1.5 rounded-xl'></div>
             <br></br>
             <p className='text-white pt-8 text-xl'>Welcome to <strong className='text-[#F2E863]'>Traveler</strong>, your passport to a world of exploration and discovery! Founded by David Damjanović and Ivan Lovrić, our blog is a celebration of diverse cultures, breathtaking landscapes, and the joy of uncovering hidden gems around the globe.</p>
             <div>
@@ -22,7 +22,6 @@ const About = () => {
                 <p className='text-white text-xl pt-3 pl-5 pr-20'>Ivan Lovrić, our co-founder, is a passionate advocate for off-the-beaten-path exploration. Armed with a camera and a keen eye for detail, Ivan captures the essence of each destination, from the tranquil landscapes of the Swiss Alps to the vibrant markets of Marrakech. His goal is to inspire others to venture beyond the ordinary and embrace the extraordinary diversity our world has to offer.</p>
             </div>
         </div>
-        <div className='flex flex-end bg-[#F2E863] h-2 mr-20 ml-20 rounded-xl'></div>
         <Footer />
       </section>
   )

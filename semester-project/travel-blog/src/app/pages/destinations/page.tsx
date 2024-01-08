@@ -4,6 +4,7 @@ import destinations from "@/app/enum/destinationsData";
 import { Header } from "@/app/components/header";
 import Image from "next/image";
 import { useState } from "react";
+import Footer from "@/app/components/footer";
 
 export default function Destinations() {
   const [search, setSearch] = useState("");
@@ -13,7 +14,7 @@ export default function Destinations() {
   )
 
   return (
-    <main className="flex flex-col items-center bg-[#2A3C4B]">
+    <main className="flex flex-col items-center bg-[#2A3C4B] text-white">
       <Header />
       <div className="flex flex-col pt-4 md:p-20">
         <form>
@@ -36,7 +37,7 @@ export default function Destinations() {
                 />
               </div>
               <div className="p-4">
-                <p className="font-bold text-lg sm:text-xl mt-2 mb-1">{destination.location}</p>
+                <p className="font-bold text-lg sm:text-xl mt-2 mb-1 text-[#F2E863]">{destination.location}</p>
                 <p className="text-sm md:text-base">{destination.info}</p>
                 <Link href={`destinations/${destination.id}`}>
                   <button className="mt-3 md:mt-4 px-3 py-1 md:px-4 md:py-2 bg-[#F2E863] rounded-lg text-[#081C31]">
@@ -48,6 +49,7 @@ export default function Destinations() {
           ))}
         </div>
       </div>
+      <Footer />
     </main>
   );
 }

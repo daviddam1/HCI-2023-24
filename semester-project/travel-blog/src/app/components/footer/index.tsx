@@ -13,6 +13,7 @@ import Image from 'next/image';
 const Footer = () => {
   return (
     <section className='bg-[#2A3C4B]'>
+      <div className='flex flex-end bg-[#F2E863] h-0.5 mx-20 rounded-xl'></div>
       <div className='flex flex-col md:flex-row p-4 md:p-20 text-white'>
         <div className='w-full md:w-1/3'>
           <Link href={"/"}>
