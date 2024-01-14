@@ -11,7 +11,7 @@ export const Header = () => {
     return (
         <div className='w-full flex flex-row justify-between pt-7 px-4 md:px-20'>
                 <Link href={"/"}>
-                    <div className='flex items-center'>
+                    <div className='flex items-center mt-3'>
                         <Image src="/assets/icons/traveler.png" width={78} height={68} alt="logo" />
                         <span className='font-bold text-[22px] text-[#F2E863] pt-3'>Traveler</span>
                     </div>
@@ -20,16 +20,16 @@ export const Header = () => {
                     {
                         sitemap.map((item) => (
                             <div className="pt-3 pr-3 md:pr-6 md:mr-6" key={item.id}>
-                                <Link className="font-regular text-white" href={item.link}>{item.name}</Link>
+                                <Link className="font-regular text-white hover:text-[#F2E863]" href={item.link}>{item.name}</Link>
                             </div>
                         ))
                     }
-                    <button className='p-2 md:p-3 rounded-lg border-2 mt-3 md:mt-0 text-white'>Login</button>
+                    <button className='p-2 md:p-3 rounded-lg border-2 mt-3 text-white hover:text-[#F2E863] hover:border-[#F2E863]'>Login</button>
                 </div>
-                <div className='items-center justify-end pt-6 px-4 hidden max-lg:block '>
+                <div className='items-center justify-end pt-8 px-4 hidden max-lg:block'>
                     <FontAwesomeIcon icon={faBars}  rotation={showMenu? 90:180} color={"#F2E863"} onClick={() => (setShowMenu(!showMenu))} size='2x' />
                     <>
-                        {showMenu && <div className='absolute top-15 right-2 z-50 bg-[#081C31] rounded-xl p-4'>
+                        {showMenu && <div className='absolute top-15 right-2 z-50 bg-[#2A3C4B] rounded-xl p-4 border-2 border-[#F2E863]'>
                             {
                                 <>
                                     {sitemap.map((item) => (
