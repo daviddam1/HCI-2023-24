@@ -3,7 +3,7 @@ const destinations = [
         id: 1,
         location: 'Paris, France',
         img: '/assets/images/destinations/paris.jpg',
-        info: 'Paris is the capital city of France and is known for its art, fashion, and culture. Paris, often called the City of Lights, is a hub for gastronomy, boasting exquisite cuisine and renowned culinary experiences. Its iconic landmarks, including the Notre-Dame Cathedral and the historic Montmartre district, add to the citys allure. Additionally, Paris hosts world-class museums such as the Musée dOrsay, showcasing remarkable art collections and cultural treasures.',
+        info: 'Paris, often called the City of Lights, is the capital city of France and is known for its art, fashion, and culture. Its iconic landmarks, including the Notre-Dame Cathedral and the historic Montmartre district, add to the citys allure.',
         topLocations: [
             {
                 id: 1,
@@ -39,7 +39,7 @@ const destinations = [
         id: 2,
         location: 'Tokyo, Japan',
         img: '/assets/images/destinations/tokyo.jpg',
-        info: 'Tokyo, a city where ancient traditions harmoniously coexist with cutting-edge technology, captivates visitors with its vibrant energy and eclectic neighborhoods. The citys dedication to innovation reflects in its efficient transportation systems and futuristic architecture. Embracing a rich cultural heritage, Tokyo delights tourists with serene gardens, revered shrines, and a dynamic culinary scene showcasing both traditional delicacies and innovative dining experiences.',
+        info: 'Tokyo, a city where ancient traditions harmoniously coexist with cutting-edge technology, captivates visitors with its vibrant energy and eclectic neighborhoods. The citys dedication to innovation reflects in its efficient transportation systems and futuristic architecture.',
         topLocations: [
             {
                 id: 1,
