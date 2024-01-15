@@ -27,8 +27,8 @@ export const Feed = () => {
               <Image className={item.id === 2 ? "rounded-xl scale-75 md:scale-100" : "rounded-xl md:mr-8 scale-75 md:scale-100"} width={250} height={100} src={item.img} alt={item.name} />
             </div>
             <div className={item.id === 2 ? 'w-full md:w-1/4 md:mr-8 text-right' : 'w-full md:w-1/4'}>
-              <p className='font-bold text-[14px] md:text-[20px] pt-5 md:pt-1 pb-1 md:pb-5'>{item.name}</p>
-              <p className='text-[10px] md:text-[20px]'>{item.body}</p>
+              <p className='font-bold text-[12px] md:text-[20px] pt-5 md:pt-1 pb-1 md:pb-5'>{item.name}</p>
+              <p className='text-[9px] md:text-[20px]'>{item.body}</p>
             </div>
           </div>
         ))}

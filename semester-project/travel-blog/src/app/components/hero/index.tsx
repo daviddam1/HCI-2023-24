@@ -14,20 +14,20 @@ const Hero = () => {
 
   return (
     <>
-      <div className='bg-slate-600' style={{ backgroundImage: 'url(../assets/images/header-wallpaper.png)', backgroundSize: '100% 100%', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}}>
+      <div className='bg-slate-600' style={{ backgroundImage: 'url(../assets/images/header-wallpaper.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}}>
         <Header />
-        <div className='p-4 md:p-20 text-white'>
-          <div className='text-[18px] md:text-[48px] font-extrabold mt-24 md:mt-16'>
+        <div className='flex flex-col justify-center items-center p-4 md:p-20 text-white'>
+          <div className='text-[24px] md:text-[48px] font-extrabold mt-56 md:mt-20'>
             <p>Exploring the World,</p>
             <p> One Journey at a Time</p>
           </div>
-          <div className='pt-4 md:pt-12 text-[8px] md:text-[18px] font-medium md:font-semibold'>
+          <div className='pt-4 md:pt-12 text-[10px] md:text-[18px] font-medium md:font-semibold'>
             <p>Discovering Diverse Cultures, Experiencing Unforgettable Adventures,<br />
               and Sharing the Beauty of Our Planet, One Journey at a Time
             </p>
           </div>
-          <div className='pb-20 md:pb-28 pt-12 md:pt-20'>
-            <button onClick={scrollToDestinations} className='w-20 md:w-48 my-2 md:my-10 px-2 md:px-8 py-2 md:py-4 bg-[#F2E863] rounded-lg text-[#081C31] text-[8px] md:text-[16px] font-bold hover:scale-110'>Getting Started</button>
+          <div className='pb-60 md:pb-28 pt-12 md:pt-20'>
+            <button onClick={scrollToDestinations} className='w-28 md:w-48 my-2 md:my-10 px-2 md:px-8 py-2 md:py-4 bg-[#F2E863] rounded-lg text-[#081C31] text-[11px] md:text-[16px] font-bold hover:scale-110'>Getting Started</button>
           </div>
         </div>
       </div>

@@ -47,7 +47,7 @@ export default function DestinationPost({ params }: { params: { postId: string }
         ))}
       </div>
       <Link href="/pages/destinations">
-        <button className="text-[#081C31] text-[12px] md:text-[16px] cursor-pointer mt-8 bg-[#F2E863] my-6 p-2 w-40 md:w-56 rounded-xl hover:scale-110">&larr; Back to Destinations</button>
+        <button className="text-[#081C31] text-[12px] md:text-[16px] cursor-pointer mt-8 bg-[#F2E863] my-6 p-2 w-44 md:w-56 rounded-xl hover:scale-110">&larr; Back to Destinations</button>
       </Link>
       <Footer />
     </div>

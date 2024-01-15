@@ -40,7 +40,7 @@ export default function Destinations() {
                 <p className="font-bold text-base md:text-lg sm:text-xl mt-2 mb-1 text-[#F2E863]">{destination.location}</p>
                 <p className="text-xs md:text-base">{destination.info}</p>
                 <Link href={`destinations/${destination.id}`}>
-                  <button className="w-16 md:w-28 mt-3 md:mt-4 px-2 py-1 md:px-4 md:py-2 bg-[#F2E863] rounded-lg text-[#081C31] text-[10px] md:text-[16px] hover:scale-110">
+                  <button className="w-20 md:w-28 mt-3 md:mt-4 px-2 py-1 md:px-4 md:py-2 bg-[#F2E863] rounded-lg text-[#081C31] text-[12px] md:text-[16px] hover:scale-110">
                     More info
                   </button>
                 </Link>
