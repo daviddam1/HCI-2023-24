@@ -21,8 +21,8 @@ const Hero = () => {
             <p>Exploring the World,</p>
             <p> One Journey at a Time</p>
           </div>
-          <div className='pt-4 md:pt-12 text-[10px] md:text-[18px] font-medium md:font-semibold'>
-            <p>Discovering Diverse Cultures, Experiencing Unforgettable Adventures,<br />
+          <div className='pt-4 md:pt-12 text-[11px] md:text-[18px] font-semibold'>
+            <p>Discovering Diverse Cultures, Experiencing Unforgettable Adventures,
               and Sharing the Beauty of Our Planet, One Journey at a Time
             </p>
           </div>
