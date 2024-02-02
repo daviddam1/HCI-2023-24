@@ -1,7 +1,7 @@
 const heroItems = [
     {   
         id:1,
-        img:'/assets/images/egypt.jpg',
+        img:'/assets/images/pyramids.jpg',
         name:'Great Pyramids of Giza',
         loc_img:'/assets/icons/location.png',
         location:'Cairo, Egypt',
