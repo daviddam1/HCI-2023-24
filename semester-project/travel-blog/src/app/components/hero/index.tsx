@@ -21,7 +21,7 @@ const Hero = () => {
             <p>Exploring the World,</p>
             <p> One Journey at a Time</p>
           </div>
-          <div className='pt-4 md:pt-12 text-[11px] md:text-[18px] font-semibold'>
+          <div className='pt-4 md:pt-12 text-[11px] md:text-[18px] font-semibold text-center'>
             <p>Discovering Diverse Cultures, Experiencing Unforgettable Adventures,
               and Sharing the Beauty of Our Planet, One Journey at a Time
             </p>
@@ -40,7 +40,7 @@ const Hero = () => {
                 Our Top Popular<br /><span className='text-[#F2E863]'>Destinations</span>
               </p>
             </div>
-            <div className='flex flex-col-reverse md:w-1/2 pt-5'>
+            <div className='flex flex-col-reverse md:text-right pt-5'>
               <p className='text-[12px] md:text-[16px] font-semibold pb-3'>
                 The following are the selected tourist spots that<br />are most in demand by our explorers
               </p>
