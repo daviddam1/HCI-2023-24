@@ -19,13 +19,13 @@ export default function Destinations() {
       <div className="flex flex-col pt-4 md:p-12">
         <form>
           <input
-            className="w-80 md:w-1/2 flex items-center p-2 rounded-xl mx-auto text-black mt-10 mb-12 md:mb-24 outline-none"
+            className="w-64 md:w-1/2 flex items-center p-2 rounded-xl mx-auto text-black mt-10 mb-12 md:mb-24 outline-none"
             placeholder="Search (e.g. Rome)"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           ></input>
         </form>
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-3 md:gap-6 mx-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-3 md:gap-6 mx-5">
           {filteredDestinations.map((destination) => (
             <div key={destination.id} className="rounded-xl overflow-hidden shadow-md bg-[#2A3C4B] mb-3">
               <div className="relative h-40 sm:h-52">

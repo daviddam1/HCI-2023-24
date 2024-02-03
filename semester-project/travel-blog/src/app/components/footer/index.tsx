@@ -22,12 +22,12 @@ const Footer = () => {
                   <span className='font-semibold text-[20px] md:text-[24px] text-[#F2E863] pt-3'>Traveler</span>
                 </div>
               </Link>
-              <p className='pt-6 md:pt-8 px-10 md:px-0 text-[13px] md:text-[16px] text-base italic'>
+              <p className='pt-6 md:pt-8 px-10 md:px-0 text-sm md:text-base italic'>
                 &quot;At Traveler, we&apos;re your trusted companions in navigating the globe&apos;s hidden treasures. With our extensive travel guides and personal insights, we&apos;re dedicated to helping you uncover and explore the world&apos;s most captivating destinations, from remote corners to vibrant metropolises, revealing the beauty and diversity of our planet.&quot;
               </p>
           </div>
           <div className='flex justify-around'>
-              <div className='w-full flex flex-col items-start text-[12px] md:text-[16px] px-12 ml-3 md:ml-64'>
+              <div className='w-full flex flex-col items-start text-[12px] md:text-[16px] px-12 ml-3 md:ml-40 lg:ml-64'>
                 <h2 className='pt-8 pb-5 text-[#F2E863] font-semibold text-[14px] md:text-[18px]'>Spaces</h2>
                 {sitemap.map((item) => (
                   <div className="pt-3" key={item.id}>
