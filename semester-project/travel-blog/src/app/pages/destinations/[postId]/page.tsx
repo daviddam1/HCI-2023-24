@@ -25,13 +25,13 @@ export default function DestinationPost({ params }: { params: { postId: string }
   return (
     <div className="flex flex-col items-center bg-[#2A3C4B] text-white">
       <Header />
-      <h1 className="text-xl md:text-3xl font-bold pt-10 capitalize text-[#F2E863]">
+      <h1 className="text-xl md:text-3xl font-bold pt-10 capitalize text-white">
         Sights in {destination.location}
       </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-6 md:gap-8 px-4 sm:px-10 lg:px-20 py-4 md:py-10 ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-6 md:gap-8 mx-10 py-4 md:py-10 ">
         {destination.topLocations.map((topLocation, index) => (
           <div className='py-4 rounded-xl overflow-hidden shadow-md bg-[#2A3C4B]' key={index}>
-            <h2 className="text-lg md:text-xl font-bold my-3 text-[#F2E863]">{topLocation.name}</h2>
+            <h2 className="text-base md:text-lg font-bold my-3 pl-2 text-[#F2E863]">{topLocation.name}</h2>
             <div className="relative w-full h-60 sm:h-80">
               <Image
                 layout="fill"
@@ -41,8 +41,8 @@ export default function DestinationPost({ params }: { params: { postId: string }
                 className="rounded-xl"
               />
             </div>
-            <p className="mt-2 text-sm md:text-base"><strong className='text-[#F2E863]'>Location:</strong> {topLocation.location}</p>
-            <p className='mt-4 text-sm md:text-base font-regular'><strong className='text-[#F2E863]'>Info: </strong>{topLocation.info}</p>
+            <p className="mt-2 text-xs md:text-base font-medium pl-2"><strong className='text-[#F2E863] font-bold'>Location:</strong> {topLocation.location}</p>
+            <p className='mt-4 text-xs md:text-base font-medium pl-2'><strong className='text-[#F2E863] font-bold'>Info: </strong>{topLocation.info}</p>
           </div>
         ))}
       </div>

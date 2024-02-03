@@ -16,7 +16,7 @@ const StoriesExperiences = () => {
                   <div className='bg-[#F2E863] w-full h-0.5 md:h-1.5 rounded-xl'></div>
                   <div className='flex flex-col pt-5'>
                       {stories.map(story => (
-                          <div className='text-sm md:text-base p-2' key={story.id}>
+                          <div className='text-xs md:text-base p-2' key={story.id}>
                               <Link href={`travelStoriesExperiences/${story.id}`}>
                               <p className='text-[#F2E863]'>{story.title}</p>
                               </Link>

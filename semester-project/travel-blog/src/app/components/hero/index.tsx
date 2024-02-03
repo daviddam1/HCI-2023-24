@@ -26,16 +26,16 @@ const Hero = () => {
               and Sharing the Beauty of Our Planet, One Journey at a Time
             </p>
           </div>
-          <div className='pb-60 md:pb-28 pt-12 md:pt-20'>
+          <div className='pb-60 md:pb-52 pt-12 md:pt-20'>
             <button onClick={scrollToDestinations} className='w-28 md:w-48 my-2 md:my-10 px-2 md:px-8 py-2 md:py-4 bg-[#F2E863] rounded-lg text-[#081C31] text-[11px] md:text-[16px] font-bold hover:scale-110'>Getting Started</button>
           </div>
         </div>
       </div>
-      <div ref={destinationRef} className='bg-[#2A3C4B]'>
+      <div className='bg-[#2A3C4B]'>
         <div className='p-4 md:p-20 text-white'>
           <div className='flex flex-col md:flex-row justify-between pb-4 md:pb-20'>
             <div className='md:w-1/2'>
-              <div className='flex flex-end bg-[#F2E863] h-1.5 md:h-4 w-full md:w-96 mt-4 md:mt-20 rounded-xl'></div>
+              <div ref={destinationRef} className='flex flex-end bg-[#F2E863] h-1.5 md:h-4 w-full md:w-96 mt-4 md:mt-20 rounded-xl'></div>
               <p className='text-[20px] md:text-[48px] font-semibold pt-4'>
                 Our Top Popular<br /><span className='text-[#F2E863]'>Destinations</span>
               </p>
@@ -56,10 +56,10 @@ const Hero = () => {
                   <p className='font-bold mt-3 text-[16px] md:text-[18px] text-[#F2E863]'>{item.name}</p>
                   <div className='py-2'>
                     <div className='flex items-center justify-start'>
-                      <p className='font-regular text-[12px] md:text-[14px]'>{item.location}</p>
+                      <p className='font-medium text-[12px] md:text-[14px]'>{item.location}</p>
                       <Image width={50} height={20} src={item.loc_img} alt={item.location} className='scale-75'/>
                     </div>
-                    <p className='pt-4 md:pt-8 pb-12 md:pb-0 text-[11px] md:text-[16px] text-sm md:text-base font-normal md:font-medium'>{item.body}</p>
+                    <p className='pt-4 md:pt-8 pb-12 md:pb-0 text-xs md:text-base font-medium'>{item.body}</p>
                   </div>
                 </div>
               </div>

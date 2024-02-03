@@ -28,7 +28,7 @@ export const Feed = () => {
             </div>
             <div className={item.id === 2 ? 'w-full md:w-1/4 md:mr-8 text-right' : 'w-full md:w-1/4'}>
               <p className='font-bold text-[12px] md:text-[20px] pt-5 md:pt-1 pb-1 md:pb-5'>{item.name}</p>
-              <p className='text-[9px] md:text-[20px]'>{item.body}</p>
+              <p className='font-medium text-[9px] md:text-[20px]'>{item.body}</p>
             </div>
           </div>
         ))}

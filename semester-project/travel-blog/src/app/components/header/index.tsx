@@ -34,7 +34,7 @@ export const Header = () => {
                                 <>
                                     {sitemap.map((item) => (
                                         <div className="py-1 pr-3 md:pr-6 md:mr-6" key={item.id}>
-                                            <Link className="font-regular text-white" href={item.link}>{item.name}</Link>
+                                            <Link className="font-semibold text-white" href={item.link}>{item.name}</Link>
                                         </div>
 
                                     ))}

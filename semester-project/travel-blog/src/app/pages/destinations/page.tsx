@@ -25,7 +25,7 @@ export default function Destinations() {
             onChange={(e) => setSearch(e.target.value)}
           ></input>
         </form>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-3 md:gap-6 mx-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-3 md:gap-6 mx-10">
           {filteredDestinations.map((destination) => (
             <div key={destination.id} className="rounded-xl overflow-hidden shadow-md bg-[#2A3C4B] mb-3">
               <div className="relative h-40 sm:h-52">
@@ -37,8 +37,8 @@ export default function Destinations() {
                 />
               </div>
               <div className="p-4">
-                <p className="font-bold text-base md:text-lg sm:text-xl mt-2 mb-1 text-[#F2E863]">{destination.location}</p>
-                <p className="text-xs md:text-base">{destination.info}</p>
+                <p className="font-bold text-lg mt-2 mb-1 text-[#F2E863]">{destination.location}</p>
+                <p className="text-xs font-medium md:text-base">{destination.info}</p>
                 <Link href={`destinations/${destination.id}`}>
                   <button className="w-24 md:w-28 mt-3 md:mt-4 px-2 py-1 md:px-4 md:py-2 bg-[#F2E863] rounded-lg font-semibold text-[#081C31] text-[12px] md:text-[16px] hover:scale-110">
                     More info

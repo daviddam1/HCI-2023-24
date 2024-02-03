@@ -30,8 +30,8 @@ const Page = () => {
       <div className='grid grid-cols-2 md:grid-cols-3 mx-6 md:mx-56 mb-24'>
         {filteredUsers.map((user) => (
           <div key={user.id} className='flex items-center p-2 md:p-5 text-white'>
-            <Image className='rounded-2xl border-2 border-[#F2E863] w-[70px] h-[70px] md:w-[120px] md:h-[120px]' src={user.img} alt='profile image' width='100' height='100' />
-            <p className='text-sm md:text-xl pl-1 md:pl-2 cursor-pointer hover:text-[#F2E863]'>{user.name}</p>
+            <Image className='rounded-2xl border-2 border-[#F2E863] w-[80px] h-[80px] md:w-[120px] md:h-[120px]' src={user.img} alt='profile image' width='100' height='100' />
+            <p className='text-sm md:text-xl font-medium pl-1 md:pl-2 cursor-pointer hover:text-[#F2E863]'>{user.name}</p>
           </div>
         ))}
       </div>
