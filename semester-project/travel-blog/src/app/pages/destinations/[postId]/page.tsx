@@ -7,18 +7,19 @@ import Footer from '@/app/components/footer';
 
 export default function DestinationPost({ params }: { params: { postId: string } }) {
   const { postId } = params;
+  console.log(postId)
 
   const destination = destinations.find((dest) => String(dest.id) === postId);
 
   if (!destination) {
     console.log(destination);
     return (
-        <div className="flex flex-col items-center justify-center p-20 py-72 md:p-80 bg-[#2A3C4B]">
-          <h1 className="text-3xl text-white font-bold p-10">Destination not found!</h1>
-          <Link href="/pages/destinations">
-            <button className="bg-[#F2E863]  font-medium cursor-pointer rounded-xl p-2 hover:scale-110">&larr; Back to Destionations</button>
-          </Link>
-        </div>
+      <div className="flex flex-col items-center justify-center p-20 py-72 md:p-80 bg-[#2A3C4B]">
+        <h1 className="text-3xl text-white font-bold p-10">Destination not found!</h1>
+        <Link href="/pages/destinations">
+          <button className="bg-[#F2E863]  font-medium cursor-pointer rounded-xl p-2 hover:scale-110">&larr; Back to Destionations</button>
+        </Link>
+      </div>
     );
   }
 
