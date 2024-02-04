@@ -37,7 +37,7 @@ const Hero = () => {
             <div className='md:w-1/2'>
               <div ref={destinationRef} className='flex flex-end bg-[#F2E863] h-1.5 md:h-4 w-full md:w-96 mt-4 md:mt-20 rounded-xl'></div>
               <p className='text-[20px] md:text-[48px] font-semibold pt-4'>
-                Our Top Popular<br /><span className='text-[#F2E863]'>Destinations</span>
+                Our Top Popular<br /><span className='text-[#F2E863] font-bold'>Destinations</span>
               </p>
             </div>
             <div className='flex flex-col-reverse md:text-right pt-5'>

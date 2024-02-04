@@ -13,12 +13,12 @@ export default function DestinationPost({ params }: { params: { postId: string }
   if (!destination) {
     console.log(destination);
     return (
-      <main className="flex flex-col items-center min-h-screen max-w-5xl m-auto p-10 bg-[#2A3C4B]">
-        <h1 className="text-3xl font-bold p-10">Destination not found</h1>
-        <Link href="/pages/destinations">
-          <span className="text-purple-500 cursor-pointer">&larr; Back to Destinations</span>
-        </Link>
-      </main>
+        <div className="flex flex-col items-center justify-center p-20 py-72 md:p-80 bg-[#2A3C4B]">
+          <h1 className="text-3xl text-white font-bold p-10">Destination not found!</h1>
+          <Link href="/pages/destinations">
+            <button className="bg-[#F2E863]  font-medium cursor-pointer rounded-xl p-2 hover:scale-110">&larr; Back to Destionations</button>
+          </Link>
+        </div>
     );
   }
 

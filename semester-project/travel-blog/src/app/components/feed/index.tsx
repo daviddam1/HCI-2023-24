@@ -11,8 +11,8 @@ export const Feed = () => {
         <div className='flex flex-col md:flex-row-reverse justify-between pb-4 md:pb-20'>
           <div className=''>
             <div className='bg-[#2A3C4B] h-1.5 md:h-4 w-full md:w-96 mb-4 rounded-xl'></div>
-            <p className='text-[20px] md:text-[48px] font-semibold text-[#2A3C4B] pb-5 md:pb-0'>
-              The <span className='text-white'>Experience<br /></span>by Our Explorers
+            <p className='text-[20px] md:text-[48px] font-semibold pb-5 md:pb-0'>
+              The <span className='text-[#2A3C4B] font-bold'>Experience<br /></span>by Our Explorers
             </p>
           </div>
           <div className='flex flex-col-reverse md:w-1/2'>
