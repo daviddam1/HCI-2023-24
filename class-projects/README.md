@@ -1,5 +1,5 @@
 # Class Projects
-<br/>
+
 References to class projects:
 
 - Class project 1: [Figma - Crash Course](/class-projects/class-project-1/)
