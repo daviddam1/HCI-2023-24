@@ -35,7 +35,7 @@ const stories = [
         id: 5,
         title: "Cafés and Couture: Maya's Journey Through the Heart of Paris",
         author: "Maya Patel",
-        img: "/assets/images/community/Maya.png",
+        img: "/assets/images/community/maya.png",
         text: "In the enchanting realm of Paris, my journey seamlessly merged the sophistication of cafés with the allure of high fashion. Each cobblestone street became a runway, and every quaint café, a backdrop for my exploration through the heart of the city. Starting my day at a charming Montmartre boulangerie, I indulged in flaky croissants and velvety café au lait, savoring the quintessential Parisian breakfast. Energized, I strolled along the Seine, where book-lined bouquinistes and artists lined the riverbanks, creating an ambiance that echoed the city's timeless elegance. As I entered the Marais, I discovered hidden boutiques and artisanal ateliers, each unveiling the city's couture secrets. The scent of freshly brewed espresso led me to intimate cafés tucked away in historic corners, offering respite amid my fashionable exploration. The day crescendoed at a rooftop café near the Louvre, where I sipped champagne and gazed at the illuminated Eiffel Tower. Paris, with its intertwining threads of café culture and couture, became a canvas for my journey—a tapestry woven with the rich hues of Parisian charm and timeless style."
     }
 ];
