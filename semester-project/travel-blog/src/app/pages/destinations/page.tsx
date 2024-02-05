@@ -19,7 +19,7 @@ export default function Destinations() {
       <div className="flex flex-col pt-4 md:p-12">
         <form>
           <input
-            className="w-64 md:w-1/2 flex items-center p-2 rounded-xl mx-auto text-black mt-10 mb-12 md:mb-24 outline-none"
+            className="w-64 md:w-1/2 flex items-center p-2 rounded-xl mx-auto text-black mt-10 mb-12 md:mb-16 lg:mb-20 outline-none"
             placeholder="Search (e.g. Rome)"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
@@ -37,10 +37,10 @@ export default function Destinations() {
                 />
               </div>
               <div className="p-4">
-                <p className="font-bold text-lg mt-2 mb-1 text-[#F2E863]">{destination.location}</p>
-                <p className="text-xs font-medium md:text-base">{destination.info}</p>
+                <p className="font-bold md:text-xl text-lg mt-2 mb-1 text-[#F2E863]">{destination.location}</p>
+                <p className="text-xs font-semibold md:text-base">{destination.info}</p>
                 <Link href={`destinations/${destination.id}`}>
-                  <button className="w-24 md:w-28 mt-3 md:mt-4 px-2 py-1 md:px-4 md:py-2 bg-[#F2E863] rounded-lg font-semibold text-[#081C31] text-[12px] md:text-[16px] hover:scale-110">
+                  <button className="w-24 md:w-28 mt-3 md:mt-4 px-2 py-1 md:px-4 md:py-2 bg-[#F2E863] rounded-lg font-bold text-[#081C31] text-[12px] md:text-[16px] hover:scale-110">
                     More info
                   </button>
                 </Link>

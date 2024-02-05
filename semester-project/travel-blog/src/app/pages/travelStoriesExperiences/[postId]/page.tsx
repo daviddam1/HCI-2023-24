@@ -7,8 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const Story = ({ params }: { params: { postId: string } }) => {
-  const { postId } = params //Ovdje storyId ostane undefined
-  console.log(postId)
+  const { postId } = params;
 
   const story = stories.find((story) => String(story.id) === postId);
 
@@ -26,13 +25,13 @@ const Story = ({ params }: { params: { postId: string } }) => {
   return (
     <div className="bg-[#2A3C4B]">
       <Header />
-      <div className="text-white font-medium text-base p-10" key={story.id}>
-        <p className="text-[#F2E863] font-bold text-2xl">{story.title}</p>
-        <div className="flex justify-start font-medium text-base text-white">
-          <Image src={story.img} alt={story.author} height='80' width='80' />
-          <p><span className="text-[#F2E863]">Author: </span>{story.author}</p>
+      <div className="text-white font-medium text-base p-10 pt-12 sm:p-16 md:px-36 lg:px-44" key={story.id}>
+        <p className="text-[#F2E863] font-bold text-lg md:text-3xl">{story.title}</p>
+        <div className="flex justify-start items-center font-medium text-xs md:text-lg text-white p-5 md:p-7">
+          <Image src={story.img} alt={story.author} height='70' width='70' className="h-[50px] md:h-[70px] w-[50px] md:w-[70px] border-2 border-[#F2E863] rounded-xl" />
+          <p><span className="text-[#F2E863] pl-2">Author: </span>{story.author}</p>
         </div>
-        <p>{story.text}</p>
+        <p className="text-xs md:text-lg font-medium">{story.text}</p>
       </div>
       <Footer />
     </div>
