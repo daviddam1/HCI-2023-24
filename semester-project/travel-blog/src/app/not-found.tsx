@@ -5,7 +5,7 @@ export default function NotFound() {
     return (
         <div className=' bg-slate-600' style={{ backgroundImage: 'url(../assets/images/header-wallpaper.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', minHeight: '100vh' }}>
             <Header />
-            <div className="pt-40 px-6 md:pt-40 flex flex-col justify-center items-center">
+            <div className="pt-40 px-6 md:pt-40 flex flex-col justify-center items-center"> 
                 <h1 className="text-2xl md:text-4xl font-bold text-white text-center">
                     Oops! Page Not Found - Error 404
                 </h1>

@@ -23,7 +23,7 @@ const Footer = () => {
             </div>
           </Link>
           <p className='pt-6 lg:pt-8 px-10 lg:px-0 text-sm lg:text-base'>
-            &quot;At Traveler, we&apos;re your trusted companions in navigating the globe&apos;s hidden treasures. With our extensive travel guides and personal insights, we&apos;re dedicated to helping you uncover and explore the world&apos;s most captivating destinations."
+            &quot;At Traveler, we&apos;re your trusted companions in navigating the globe&apos;s hidden treasures. With our extensive travel guides and personal insights, we&apos;re dedicated to helping you uncover and explore the world&apos;s most captivating destinations.&quot;
           </p>
         </div>
         <div className='flex justify-around'>
