@@ -1,10 +1,14 @@
 "use client"
-import React, { useRef } from 'react'
-import heroItems from '@/app/enum/hero'
+import React, { useEffect, useRef } from 'react'
 import Image from 'next/image'
 import { Header } from '../header'
+import { fetchData } from '@/app/api'
+import heroItems from '@/app/enum/hero'
 
 const Hero = () => {
+
+  const [data, setData] = React.useState<any>([])
+
   const destinationRef = useRef<HTMLDivElement | null>(null);
 
   const scrollToDestinations = () => {
@@ -12,9 +16,27 @@ const Hero = () => {
       destinationRef.current.scrollIntoView({ behavior: 'smooth' });
   }
 
+  React.useEffect(() => {
+    const fetchDataAsync = async () => {
+      try {
+        const data = await fetchData('destinations');
+        setData(data)
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchDataAsync();
+  }, []);
+
+
+
   return (
     <>
-      <div className='bg-slate-600' style={{ backgroundImage: 'url(../assets/images/header-wallpaper.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}}>
+      <div>
+        {data.map((item: any) => { console.log(item.fields) })}
+      </div>
+      <div className='bg-slate-600' style={{ backgroundImage: 'url(../assets/images/header-wallpaper.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
         <Header />
         <div className='flex flex-col justify-center items-center p-4 md:p-20 text-white'>
           <div className='text-[24px] md:text-[48px] font-extrabold mt-56 md:mt-20'>
@@ -47,19 +69,18 @@ const Hero = () => {
             </div>
           </div>
           <div className='flex flex-wrap'>
-            {heroItems.map(item => (
-              <div key={item.id} className='px-10 md:px-2 w-full md:w-1/2 lg:w-1/3'>
+            {data.map((item: any) => (
+              <div key={item.fields.id} className='px-10 md:px-2 w-full md:w-1/2 lg:w-1/3'>
                 <div className='flex py-2'>
-                  <Image className="rounded-xl w-full" alt={item.name} height={328} width={328} src={item.img} />
+                  <Image className="rounded-xl w-full" alt={item.fields.name} height={328} width={328} src={item.fields.img} />
                 </div>
                 <div>
-                  <p className='font-bold mt-3 text-[16px] md:text-[18px] text-[#F2E863]'>{item.name}</p>
+                  <p className='font-bold mt-3 text-[16px] md:text-[18px] text-[#F2E863]'>{item.fields.name}</p>
                   <div className='py-2'>
                     <div className='flex items-center justify-start'>
-                      <p className='font-medium text-[12px] md:text-[14px]'>{item.location}</p>
-                      <Image width={50} height={20} src={item.loc_img} alt={item.location} className='scale-75'/>
+                      <p className='font-medium text-[12px] md:text-[14px]'>{item.fields.location}</p>
                     </div>
-                    <p className='pt-4 md:pt-8 pb-12 md:pb-0 text-xs md:text-base font-medium'>{item.body}</p>
+                    <p className='pt-4 md:pt-8 pb-12 md:pb-0 text-xs md:text-base font-medium'>{item.fields.body}</p>
                   </div>
                 </div>
               </div>

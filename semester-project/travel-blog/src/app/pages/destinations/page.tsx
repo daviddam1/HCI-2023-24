@@ -19,7 +19,7 @@ export default function Destinations() {
       <div className="flex flex-col pt-4 md:p-12">
         <form>
           <input
-            className="w-64 md:w-1/2 flex items-center p-2 rounded-xl mx-auto text-black mt-10 mb-12 md:mb-16 lg:mb-20 outline-none"
+            className="w-64 md:w-1/2 flex items-center p-2 rounded-xl mx-auto text-black mb-12 md:mb-16 lg:mb-20 outline-none"
             placeholder="Search (e.g. Rome)"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
