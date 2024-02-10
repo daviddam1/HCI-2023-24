@@ -33,9 +33,7 @@ const Hero = () => {
 
   return (
     <>
-      <div>
-        {data.map((item: any) => { console.log(item.fields) })}
-      </div>
+
       <div className='bg-slate-600' style={{ backgroundImage: 'url(../assets/images/header-wallpaper.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
         <Header />
         <div className='flex flex-col justify-center items-center p-4 md:p-20 text-white'>
