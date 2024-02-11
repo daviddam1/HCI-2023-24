@@ -32,6 +32,9 @@ const Story = ({ params }: { params: { postId: string } }) => {
           <p><span className="text-[#F2E863] pl-2">Author: </span>{story.author}</p>
         </div>
         <p className="text-xs md:text-lg font-medium">{story.text}</p>
+        <Link href="/pages/travelStoriesExperiences">
+          <button className="text-[#081C31] text-[12px] md:text-[16px] font-bold cursor-pointer mt-8 bg-[#F2E863] my-6 p-1 md:p-2 w-20 md:w-36 rounded-xl hover:scale-110">&larr; Back</button>
+        </Link>
       </div>
       <Footer />
     </div>
