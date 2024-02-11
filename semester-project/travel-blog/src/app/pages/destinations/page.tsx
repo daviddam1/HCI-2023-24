@@ -16,7 +16,7 @@ export default function Destinations() {
   return (
     <main className="flex flex-col items-center bg-[#2A3C4B] text-white">
       <Header />
-      <div className="flex flex-col pt-4 md:p-12">
+      <div className="flex flex-col pt-10 md:p-12">
         <form>
           <input
             className="w-64 md:w-1/2 flex items-center p-2 rounded-xl mx-auto text-black mb-12 md:mb-16 lg:mb-20 outline-none"
