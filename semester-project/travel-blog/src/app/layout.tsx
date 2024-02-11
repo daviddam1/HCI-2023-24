@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <link rel="shortcut icon" href="../assets/icons/traveler.png"></link>
+      <link rel="icon" href="/favicon.ico" sizes="any" />
       <body className={inter.className}>{children}</body>
     </html>
   )
