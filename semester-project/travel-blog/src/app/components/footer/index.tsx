@@ -15,7 +15,7 @@ const Footer = () => {
     <section className='bg-[#2A3C4B] pt-10 md:p-12'>
       <div className='flex flex-end bg-[#F2E863] h-0.5 mx-10 rounded-xl'></div>
       <div className='flex flex-col'>
-        <div className='w-full flex flex-row flex-wrap sm:flex-nowrap justify-between'>
+        <div className='w-full flex flex-row flex-wrap sm:flex-nowrap pl-16 justify-between'>
           <div className='w-full'>
             <h2 className='pt-8 pb-5 mx-10 px-10 text-[#F2E863] font-semibold text-[16px] lg:text-[18px]'>
               <Link className='flex flex-row' href={'/'}>
