@@ -1,17 +1,65 @@
 "use client"
-import Link from "next/link";
+
+import React, { useState } from "react";
 import destinations from "@/app/enum/destinationsData";
 import { Header } from "@/app/components/header";
-import Image from "next/image";
-import { useState } from "react";
 import Footer from "@/app/components/footer";
+import Card from "./components/card";
+
+interface Destination {
+  id: number;
+  location: string;
+  img: string;
+  info: string;
+  topLocations: {
+    id: number;
+    name: string;
+    img: string;
+    location: string;
+    info: string;
+  }[];
+}
 
 export default function Destinations() {
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState<string>("");
+  const [newDestination, setNewDestination] = useState<Destination>({
+    id: 0,
+    location: "",
+    img: "",
+    info: "",
+    topLocations: []
+  });
 
   const filteredDestinations = destinations.filter((destination) =>
     destination.location.toLowerCase().includes(search.toLowerCase())
-  )
+  );
+
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = event.target;
+    setNewDestination({ ...newDestination, [name]: value });
+  };
+
+  const addDestination = () => {
+    destinations.push(newDestination);
+    setNewDestination({ id: 0, location: "", img: "", info: "", topLocations: [] });
+  };
+
+  React.useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await fetch('/api/posts');
+        if (!response.ok) {
+          throw new Error('Failed to fetch data');
+        }
+        const data = await response.json();
+        console.log(data)
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    }
+
+    fetchData();
+  }, []);
 
   return (
     <main className="flex flex-col items-center bg-[#2A3C4B] text-white">
@@ -23,31 +71,40 @@ export default function Destinations() {
             placeholder="Search (e.g. Rome)"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-          ></input>
+          />
         </form>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-3 md:gap-6 mx-10">
-          {filteredDestinations.map((destination) => (
-            <div key={destination.id} className="rounded-xl overflow-hidden shadow-md bg-[#2A3C4B] mb-3">
-              <div className="relative h-40 sm:h-52">
-                <Image
-                  className="object-cover rounded-t-xl"
-                  layout="fill"
-                  src={destination.img}
-                  alt={destination.location}
-                />
-              </div>
-              <div className="p-4">
-                <p className="font-bold md:text-xl text-lg mt-2 mb-1 text-[#F2E863]">{destination.location}</p>
-                <p className="text-xs font-semibold md:text-base">{destination.info}</p>
-                <Link href={`destinations/${destination.id}`}>
-                  <button className="w-24 md:w-28 mt-3 md:mt-4 px-2 py-1 md:px-4 md:py-2 bg-[#F2E863] rounded-lg font-bold text-[#081C31] text-[12px] md:text-[16px] hover:scale-110">
-                    More info
-                  </button>
-                </Link>
-              </div>
-            </div>
-          ))}
+        <Card destinations={filteredDestinations as Destination[]} />
+
+        <div className="flex flex-col justify-center">
+          <input className="p-2 m-2 text-black rounded-lg"
+            type="text"
+            placeholder="Location"
+            value={newDestination.location}
+            onChange={handleInputChange}
+            name="location"
+          />
+          <input className="p-2 m-2 text-black rounded-lg"
+            type="text"
+            placeholder="Image URL"
+            value={newDestination.img}
+            onChange={handleInputChange}
+            name="img"
+          />
+          <input className="p-2 m-2 text-black rounded-lg"
+            type="text"
+            placeholder="Info"
+            value={newDestination.info}
+            onChange={handleInputChange}
+            name="info"
+          />
+
         </div>
+        <div className="flex justify-center">
+          <button onClick={addDestination} className="w-24 md:w-48 mt-3 md:mt-4 px-2 py-1 md:px-4 md:py-2 bg-[#F2E863] rounded-lg font-bold text-[#081C31] text-[12px] md:text-[16px] hover:scale-110">
+            Add destination
+          </button>
+        </div>
+
       </div>
       <Footer />
     </main>
