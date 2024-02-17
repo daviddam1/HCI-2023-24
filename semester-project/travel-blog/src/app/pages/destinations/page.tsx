@@ -64,7 +64,7 @@ export default function Destinations() {
   return (
     <main className="flex flex-col items-center bg-[#2A3C4B] text-white">
       <Header />
-      <div className="flex flex-col pt-10 md:p-12">
+      <div className="flex flex-col pt-10 md:p-12 md:pt-20">
         <form>
           <input
             className="w-64 md:w-1/2 flex items-center p-2 rounded-xl mx-auto text-black mb-12 md:mb-16 lg:mb-20 outline-none"
@@ -75,7 +75,7 @@ export default function Destinations() {
         </form>
         <Card destinations={filteredDestinations as Destination[]} />
 
-        <div className="flex flex-col justify-center">
+        <div className="flex flex-col justify-center mx-20 md:mx-32 lg:mx-40 mt-10 p-5 rounded-xl overflow-hidden shadow-md">
           <input className="p-2 m-2 text-black rounded-lg"
             type="text"
             placeholder="Location"
@@ -97,14 +97,10 @@ export default function Destinations() {
             onChange={handleInputChange}
             name="info"
           />
-
-        </div>
-        <div className="flex justify-center">
-          <button onClick={addDestination} className="w-24 md:w-48 mt-3 md:mt-4 px-2 py-1 md:px-4 md:py-2 bg-[#F2E863] rounded-lg font-bold text-[#081C31] text-[12px] md:text-[16px] hover:scale-110">
+          <button onClick={addDestination} className="self-center w-32 md:w-48 mt-3 md:mt-4 px-2 py-1 md:px-4 md:py-2 bg-[#F2E863] rounded-lg font-bold text-[#081C31] text-[12px] md:text-[16px] hover:scale-110">
             Add destination
           </button>
         </div>
-
       </div>
       <Footer />
     </main>

@@ -12,7 +12,7 @@ import Image from 'next/image';
 
 const Footer = () => {
   return (
-    <section className='bg-[#2A3C4B] pt-10 md:p-12'>
+    <section className='bg-[#2A3C4B] pt-10 md:p-12 text-white'>
       <div className='flex flex-end bg-[#F2E863] h-0.5 mx-10 rounded-xl'></div>
       <div className='flex flex-col'>
         <div className='w-full flex flex-row flex-wrap sm:flex-nowrap pl-16 justify-between'>

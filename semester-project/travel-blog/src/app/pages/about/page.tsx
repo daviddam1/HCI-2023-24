@@ -6,7 +6,7 @@ const About = () => {
   return (
     <section className='bg-[#2A3C4B]'>
       <Header />
-      <div className='p-10 md:p-20 md:px-32'>
+      <div className='p-10 md:py-16 lg:py-20 sm:px-20 md:px-40 lg:px-64 text-justify'>
         <p className='text-white font-bold text-xl md:text-3xl'>About Us</p>
         <div className='flex flex-end bg-[#F2E863] h-0.5 md:h-1.5 rounded-xl'></div>
         <p className='text-white md:leading-5 pt-5 md:pt-10 font-regular text-xs md:text-[20px]'>Welcome to <strong className='text-[#F2E863]'>Traveler</strong>, your passport to a world of exploration and discovery! Founded by David Damjanović and Ivan Lovrić, our blog is a celebration of diverse cultures, breathtaking landscapes, and the joy of uncovering hidden gems around the globe. With a shared passion for travel, we aim to inspire and inform fellow adventurers, providing insights, tips, and stories that ignite wanderlust and spark curiosity. From the tranquil beaches of Bali to the bustling streets of Tokyo, we traverse the globe, seeking out unique experiences and sharing them with our community. Join us on this exhilarating journey as we delve into the heart of travel, forging connections, creating memories, and embracing the beauty of our world, one destination at a time.</p>

@@ -24,7 +24,7 @@ export default function DestinationPost({ params }: { params: { postId: string }
   return (
     <div className="flex flex-col items-center bg-[#2A3C4B] text-white">
       <Header />
-      <h1 className="text-xl md:text-3xl font-bold pt-10 capitalize text-white">
+      <h1 className="text-xl md:text-3xl font-bold pt-10 md:pt-20 capitalize text-white">
         Sights in {destination.location}
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4 md:gap-6 mx-10 md:px-12 py-4 md:py-10 ">

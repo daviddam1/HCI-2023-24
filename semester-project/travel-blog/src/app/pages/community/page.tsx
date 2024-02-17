@@ -16,7 +16,7 @@ const Page = () => {
   return (
     <div className='bg-[#2A3C4B]'>
       <Header />
-      <div className='text-white flex items-center justify-center mt-10 mr-10'>
+      <div className='text-white flex items-center justify-center mt-7 mr-10'>
         <p className='text-xl md:text-3xl font-bold pl-10 pr-6 pb-8 pt-8 md:p-12'>Welcome to <strong className='text-[#F2E863]'>Traveler</strong> Community!</p>
         <form>
           <input
