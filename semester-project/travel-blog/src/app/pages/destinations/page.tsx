@@ -62,7 +62,7 @@ export default function Destinations() {
   }, []);
 
   return (
-    <main className="flex flex-col items-center bg-[#2A3C4B] text-white">
+    <div className="flex flex-col items-center bg-[#2A3C4B] text-white">
       <Header />
       <div className="flex flex-col pt-10 md:p-12 md:pt-20">
         <form>
@@ -73,36 +73,37 @@ export default function Destinations() {
             onChange={(e) => setSearch(e.target.value)}
           />
         </form>
+
         <Card destinations={filteredDestinations as Destination[]} />
 
-        <div className="flex flex-col justify-center mx-20 md:mx-32 lg:mx-40 mt-10 p-5 rounded-xl overflow-hidden shadow-md">
-          <input className="p-2 m-2 text-black rounded-lg"
-            type="text"
-            placeholder="Location"
-            value={newDestination.location}
-            onChange={handleInputChange}
-            name="location"
-          />
-          <input className="p-2 m-2 text-black rounded-lg"
-            type="text"
-            placeholder="Image URL"
-            value={newDestination.img}
-            onChange={handleInputChange}
-            name="img"
-          />
-          <input className="p-2 m-2 text-black rounded-lg"
-            type="text"
-            placeholder="Info"
-            value={newDestination.info}
-            onChange={handleInputChange}
-            name="info"
-          />
-          <button onClick={addDestination} className="self-center w-32 md:w-48 mt-3 md:mt-4 px-2 py-1 md:px-4 md:py-2 bg-[#F2E863] rounded-lg font-bold text-[#081C31] text-[12px] md:text-[16px] hover:scale-110">
-            Add destination
-          </button>
-        </div>
+        <div className="flex flex-col rounded-xl overflow-hidden shadow-md py-5 mt-10 mx-10 sm:mx-32 md:mx-40 lg:mx-56">
+              <input className="text-black rounded-lg m-2 p-2"
+                type="text"
+                placeholder="Location"
+                value={newDestination.location}
+                onChange={handleInputChange}
+                name="location"
+              />
+              <input className="text-black rounded-lg m-2 p-2"
+                type="text"
+                placeholder="Image URL"
+                value={newDestination.img}
+                onChange={handleInputChange}
+                name="img"
+              />
+              <input className="text-black rounded-lg m-2 p-2"
+                type="text"
+                placeholder="Info"
+                value={newDestination.info}
+                onChange={handleInputChange}
+                name="info"
+              />
+              <button onClick={addDestination} className="self-center w-32 md:w-48 mt-3 md:mt-4 px-2 py-1 md:px-4 md:py-2 bg-[#F2E863] rounded-lg font-bold text-[#081C31] text-[12px] md:text-[16px] hover:scale-110">
+                Add destination
+              </button>
+          </div>
       </div>
       <Footer />
-    </main>
+    </div>
   );
 }

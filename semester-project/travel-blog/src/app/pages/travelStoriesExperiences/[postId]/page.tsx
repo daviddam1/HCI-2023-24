@@ -25,7 +25,7 @@ const Story = ({ params }: { params: { postId: string } }) => {
   return (
     <div className="bg-[#2A3C4B]">
       <Header />
-      <div className="text-white font-medium text-base text-justify p-12 sm:px-20 md:px-40 lg:px-64" key={story.id}>
+      <div className="text-white font-medium text-base text-justify md:pt-20 p-12 sm:px-20 md:px-40 lg:px-64" key={story.id}>
         <p className="text-[#F2E863] font-bold text-lg md:text-3xl">{story.title}</p>
         <div className="flex justify-start items-center font-medium text-xs md:text-lg text-white p-5 md:p-7">
           <Image src={story.img} alt={story.author} height='70' width='70' className="h-[50px] md:h-[70px] w-[50px] md:w-[70px] border-2 border-[#F2E863] rounded-xl" />
