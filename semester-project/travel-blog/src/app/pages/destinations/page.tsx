@@ -83,6 +83,9 @@ export default function Destinations() {
         console.error('Error adding destination:', error)
       }
     }
+    else {
+      alert("Please fill all fields before adding new destinations!")
+    }
   };
 
   const onDelete = async (_id: string) => {
