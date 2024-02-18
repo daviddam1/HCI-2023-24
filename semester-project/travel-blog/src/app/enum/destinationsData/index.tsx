@@ -1,7 +1,6 @@
 
 const destinations = [
     {
-        id: 1,
         location: 'Paris, France',
         img: '/assets/images/destinations/paris.jpg',
         info: 'Paris, often called the City of Lights, is the capital city of France and is known for its art, fashion, and culture. Its iconic landmarks, including the Notre-Dame Cathedral and the historic Montmartre district, add to the citys allure.',
@@ -37,7 +36,6 @@ const destinations = [
         ]
     },
     {
-        id: 2,
         location: 'Tokyo, Japan',
         img: '/assets/images/destinations/tokyo.jpg',
         info: 'Tokyo, a city where ancient traditions harmoniously coexist with cutting-edge technology, captivates visitors with its vibrant energy and eclectic neighborhoods. The citys dedication to innovation reflects in its efficient transportation systems and futuristic architecture.',
@@ -67,7 +65,6 @@ const destinations = [
         ]
     },
     {
-        id: 3,
         location: 'Rome, Italy',
         img: '/assets/images/destinations/rome.jpg',
         info: 'Rome is a city filled with history, from the Colosseum to the Roman Forum. Indulge in delicious Italian cuisine and immerse yourself in centuries of art and architecture.',
@@ -103,7 +100,7 @@ const destinations = [
         ]
     },
     {
-        id: 4,
+
         location: 'New York City, USA',
         img: '/assets/images/destinations/nyc.jpg',
         info: 'New York City is a vibrant melting pot of cultures. Experience the hustle and bustle of Times Square, visit world-class museums, and enjoy diverse cuisines.',

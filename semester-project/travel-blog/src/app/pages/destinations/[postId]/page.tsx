@@ -8,7 +8,7 @@ import Footer from '@/app/components/footer';
 export default function DestinationPost({ params }: { params: { postId: string } }) {
   const { postId } = params;
 
-  const destination = destinations.find((dest) => String(dest.id) === postId);
+  const destination = destinations.find((dest) => String(dest._id) === postId);
 
   if (!destination) {
     return (
