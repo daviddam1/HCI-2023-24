@@ -32,7 +32,7 @@ export default function Destinations() {
 
   const [data, setData] = useState<Destination[]>([]);
 
-  const filteredDestinations = destinations.filter((destination) =>
+  const filteredDestinations = data.filter((destination) =>
     destination.location.toLowerCase().includes(search.toLowerCase())
   );
 
@@ -62,12 +62,10 @@ export default function Destinations() {
     e.preventDefault();
     if (newDestination.location && newDestination.img && newDestination.info) {
       try {
-        // Optimistically add the new destination to the UI
         const updatedDestinations = [...data, newDestination];
         setData(updatedDestinations);
-        setNewDestination({ _id: '', location: '', img: '', info: '', topLocations: [] });
+        setNewDestination({ _id: '', location: '', img: '', info: '', topLocations: [] })
 
-        // Send the new destination to the server
         const response = await fetch('http://localhost:3000/api/posts', {
           method: 'POST',
           headers: {
@@ -77,13 +75,12 @@ export default function Destinations() {
         });
 
         if (!response.ok) {
-          throw new Error('Failed to add destination');
+          throw new Error('Failed to add destination')
         }
 
-        // Fetch the updated data from the server
-        fetchData();
+        fetchData()
       } catch (error) {
-        console.error('Error adding destination:', error);
+        console.error('Error adding destination:', error)
       }
     }
   };
@@ -95,7 +92,7 @@ export default function Destinations() {
       });
 
       if (!response.ok) {
-        throw new Error("Failed to delete destination");
+        throw new Error("Failed to delete destination")
       }
 
       const updatedDestinations = data.filter(
@@ -104,7 +101,7 @@ export default function Destinations() {
 
       setData(updatedDestinations);
     } catch (error) {
-      console.error("Error deleting destination:", error);
+      console.error("Error deleting destination:", error)
     }
   }
 
@@ -121,7 +118,7 @@ export default function Destinations() {
           />
         </form>
 
-        <Card destinations={data} onDelete={onDelete} />
+        <Card destinations={filteredDestinations} onDelete={onDelete} />
 
         <div className="flex flex-col rounded-xl overflow-hidden shadow-md py-5 mt-10 mx-10 sm:mx-32 md:mx-40 lg:mx-56">
           <input className="text-black rounded-lg m-2 p-2"
